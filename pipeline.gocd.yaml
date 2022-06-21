@@ -27,5 +27,5 @@ pipelines:
                     arguments:
                       - clean
                       - package
-                    command: C:\Program Files\apache-maven-3.8.6-bin\apache-maven-3.8.6\bin\mvn
+                    command: mvn
                     run_if: passed

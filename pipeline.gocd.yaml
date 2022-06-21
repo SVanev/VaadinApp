@@ -36,6 +36,11 @@ pipelines:
                     run_if: passed
                 - exec:
                     arguments:
-                      - tomcat7:deploy
+                      - tomcat:run
+                    command: mvn
+                    run_if: passed
+                - exec:
+                    arguments:
+                      - tomcat:deploy
                     command: mvn
                     run_if: passed

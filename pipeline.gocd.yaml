@@ -1,0 +1,31 @@
+format_version: 10
+pipelines:
+  VaadinPipeline:
+    group: defaultGroup
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-91d0d4e:
+        git: https://github.com/SVanev/VaadinApp
+        shallow_clone: false
+        auto_update: true
+        branch: master
+    stages:
+      - VaadinStage:
+          fetch_materials: true
+          keep_artifacts: false
+          clean_workspace: false
+          approval:
+            type: success
+            allow_only_on_success: false
+          jobs:
+            VaadinJob:
+              timeout: 0
+              tasks:
+                - exec:
+                    arguments:
+                      - clean
+                      - package
+                    command: /bin/mvn
+                    run_if: passed

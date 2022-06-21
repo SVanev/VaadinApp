@@ -29,3 +29,13 @@ pipelines:
                       - package
                     command: mvn
                     run_if: passed
+                - exec:
+                    arguments:
+                      - test
+                    command: mvn
+                    run_if: passed
+                - exec:
+                    arguments:
+                      - tomcat7:deploy
+                    command: mvn
+                    run_if: passed

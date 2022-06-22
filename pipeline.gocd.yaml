@@ -37,7 +37,7 @@ pipelines:
                 - exec:
                     arguments:
                       - start_tomcat.sh
-                    command: sh
+                    command: bash
                     run_if: passed
                 - exec:
                     arguments:

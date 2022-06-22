@@ -1,6 +1,8 @@
 org\example\CustomerService$1.class
 org\example\CustomerService.class
 org\example\CustomerStatus.class
+org\example\MyUI.class
 org\example\Customer.class
+org\example\MyUI$MyUIServlet.class
 org\example\CustomerForm.class
 org\example\CustomerService$2.class
